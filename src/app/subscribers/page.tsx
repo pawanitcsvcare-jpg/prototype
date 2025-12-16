@@ -181,7 +181,7 @@ export default function Page() {
         <div className="flex flex-1 flex-col p-6">
           <Card className="@container/card">
             <CardHeader className="border-b py-0flex items-center gap-0 space-y-0 border-b py-5 sm:flex-row pt-0">
-              <CardTitle>Subscriber&apos;s Listsss</CardTitle>
+              <CardTitle>Subscriber&apos;s List</CardTitle>
             </CardHeader>
 
             <CardContent>
