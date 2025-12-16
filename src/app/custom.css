@@ -14,3 +14,10 @@
 .mt-40{
     margin-top: 20px;
 }
+
+.bodybg{
+    background-color: lab(92 0.11 -1.69)!important;
+}
+.side-radiuss{
+    border-radius: 0px 10px 10px 0px;
+}

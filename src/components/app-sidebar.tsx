@@ -191,7 +191,7 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
           })}
         </SidebarMenu>
 
-        <NavSecondary items={data.navSecondary} className="mt-auto" />
+        <NavSecondary items={data.navSecondary} className="mt-auto p-0" />
       </SidebarContent>
 
       {/* ---------- FOOTER ---------- */}
