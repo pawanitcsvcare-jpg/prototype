@@ -86,20 +86,38 @@ font-size: 22px;
 .dashboardcar1{
 	    background: linear-gradient(190deg, #9fb9ff, #f0f9fd);
     box-shadow: 0px 0px 0px #ffffff00;
+        border: 0px;
 }
 .dashboardcar2{
 	background: linear-gradient(190deg, #fbd3ac, #fdf7f1);
     box-shadow: 0px 0px 0px #ffffff00;
+        border: 0px;
 }
 .dashboardcar3{
-	    background: linear-gradient(190deg, #5dd7f0, #edfcff);
-    box-shadow: 0px 0px 0px #ffffff00;
+	      background: linear-gradient(190deg, #82e9fe, #edfcff);
+    box-shadow: 0 0 #fff0; border: 0px;
 }
 .dashboardcar4{
 	    background: linear-gradient(190deg, #f7a291, #fdf3f1);
    box-shadow: 0px 0px 0px #ffffff00;
+       border: 0px;
 }
-
+.global-searchbar{
+    background-color: #e5e6e9;
+    border: solid 1px #e5e6e9;
+}
+/* .textColorBottom1{
+	    color: #607db9;
+}
+.textColorBottom2{
+	color: #d68e47;
+}
+.textColorBottom3{
+	    color: #50a8b9;
+}
+.textColorBottom4{
+	    color: #c16352;
+} */
 
 
 

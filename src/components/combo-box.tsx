@@ -83,7 +83,7 @@ export function ComboboxDemo() {
             variant="outline"
             role="combobox"
             aria-expanded={open}
-            className="w-[400px] justify-between"
+            className="w-[400px] justify-between global-searchbar"
           >
             {value
               ? frameworks.find((item) => item.value === value)?.label

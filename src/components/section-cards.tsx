@@ -27,7 +27,7 @@ export function SectionCards() {
           </CardAction>
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
-          <div className="line-clamp-1 flex gap-2 font-medium">
+          <div className="line-clamp-1 flex gap-2 font-medium textColorBottom1">
             Billing up this month <IconTrendingUp className="size-4" />
           </div>
         </CardFooter>
@@ -46,7 +46,7 @@ export function SectionCards() {
           </CardAction>
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
-          <div className="line-clamp-1 flex gap-2 font-medium">
+          <div className="line-clamp-1 flex gap-2 font-medium textColorBottom2">
             Billing up this month <IconTrendingUp className="size-4" />
           </div>
         </CardFooter>
@@ -65,7 +65,7 @@ export function SectionCards() {
           </CardAction>
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
-          <div className="line-clamp-1 flex gap-2 font-medium">
+          <div className="line-clamp-1 flex gap-2 font-medium textColorBottom3">
            Active of this month <IconTrendingUp className="size-4" />
           </div>
         </CardFooter>
@@ -84,7 +84,7 @@ export function SectionCards() {
           </CardAction>
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
-          <div className="line-clamp-1 flex gap-2 font-medium">
+          <div className="line-clamp-1 flex gap-2 font-medium textColorBottom4">
             New Inventory of this month <IconTrendingUp className="size-4" />
           </div>
         </CardFooter>
