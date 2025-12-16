@@ -27,6 +27,7 @@ export default function Page() {
         <SiteHeader />
         <div className="flex flex-1 flex-col">
           <div className="@container/main flex flex-1 flex-col gap-2">
+          
             <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
               <SectionCards />
               {/* <div className="px-4 lg:px-6">
@@ -34,16 +35,16 @@ export default function Page() {
               </div> */}
 
 
-<div className="px-4 lg:px-6">
-      <ChartSwitcher />
-    </div>
-              
-         
+<div className="flex flex-col md:flex-row gap-4 px-4 lg:px-6">
+  <div className="md:w-1/2">
+    <ChartSwitcher />
+  </div>
+  <div className="md:w-1/2">
+    <ChartActivationDeactivation />
+  </div>
+</div>
 
 
-               <div className="px-4 lg:px-6">
-               <ChartActivationDeactivation />
-               </div>
 
               <div className="px-4 lg:px-6">
                 <ChartAreaInteractive />

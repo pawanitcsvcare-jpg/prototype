@@ -25,11 +25,10 @@ export function ChartSwitcher() {
   const [selectedChart, setSelectedChart] = React.useState("activity")
 
   return (
-    <Card className="activedeclass">
+    <Card className="activedeclass pt-2">
       <CardHeader className="flex flex-row items-center justify-between bordernonee">
         <div>
-          <CardTitle>Activity and Usage</CardTitle>
-          <CardDescription>Last 7 Days</CardDescription>
+          <CardTitle>Activity and Usage (Last 7 Days)</CardTitle>
         </div>
 
         {/* Dropdown */}

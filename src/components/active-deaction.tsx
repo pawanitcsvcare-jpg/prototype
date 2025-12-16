@@ -1,13 +1,7 @@
 "use client"
 
-import { TrendingUp } from "lucide-react"
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 
-import {
-  Card,
-  CardContent,
-
-} from "@/components/ui/card"
 import {
   ChartContainer,
   ChartTooltip,
@@ -26,48 +20,79 @@ const chartData = [
   { month: "Dec-10-2025", activation: 214, deactivation: 140 },
 ]
 
+// 🎨 Define colors for bars
+const activation = ["#8493ff"]
+const deactivation = ["#ffa565"]
+
 const chartConfig = {
   activation: {
     label: "Activation",
-    color: "var(--chart-3)",
+    color: activation[0],
   },
   deactivation: {
     label: "Deactivation",
-    color: "var(--chart-2)",
+    color: deactivation[0],
   },
 } satisfies ChartConfig
 
 export function ChartActiveDeactive() {
   return (
-    <div className="pt-0">
+    <div className="pt-0 w-full">
+      <ChartContainer
+        config={chartConfig}
+        className="w-full h-[280px] md:h-[300px] lg:h-[300px]"
+      >
+        <BarChart data={chartData}>
+          {/* Grid */}
+          <CartesianGrid
+            vertical={false}
+            strokeOpacity={0.15}
+          />
 
-  <ChartContainer
-    config={chartConfig}
-    className="w-full aspect-[12/2]" // 👈 responsive height based on width
-  >
-    <BarChart data={chartData}>
-    <XAxis
-  dataKey="month"
-  tickLine={false}
-  tickMargin={10}
-  axisLine={false}
-  tickFormatter={(value) =>
-    new Date(value).toLocaleDateString("en-US", {
-      day: "2-digit",
-      month: "short",
-      year: "numeric",
-    })
-  }
-/>
-      <ChartTooltip
-        cursor={false}
-        content={<ChartTooltipContent indicator="dashed" />}
-      />
-      <Bar dataKey="activation" fill="var(--color-activation)" radius={4} />
-      <Bar dataKey="deactivation" fill="var(--color-deactivation)" radius={4} />
-    </BarChart>
-  </ChartContainer>
+          {/* X Axis */}
+          <XAxis
+            dataKey="month"
+            tickLine={false}
+            axisLine={false}
+            tickMargin={10}
+            tickFormatter={(value) =>
+              new Date(value).toLocaleDateString("en-US", {
+                day: "2-digit",
+                month: "short",
+                year: "numeric",
+              })
+            }
+          />
 
+          {/* Tooltip */}
+          <ChartTooltip
+            cursor={false}
+            content={<ChartTooltipContent indicator="dashed" />}
+          />
+
+          {/* Activation Bar */}
+          <Bar
+            dataKey="activation"
+            fill={activation[0]}
+            radius={4}
+            background={{
+              fill: "rgba(17,77,99,0.08)",
+              radius: 4,
+            }}
+          />
+
+          {/* Deactivation Bar */}
+          <Bar
+            dataKey="deactivation"
+            fill={deactivation[0]}
+            radius={4}
+            background={{
+              fill: "rgba(0,0,0,0.08)",
+              radius: 4,
+            }}
+          />
+        </BarChart>
+      </ChartContainer>
     </div>
   )
 }
