@@ -1,7 +1,15 @@
-import React from 'react'
+"use client"
 
-export default function page() {
+import React from "react"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+
+export default function Page() {
   return (
-    <div>page</div>
+    <div className="flex min-h-screen items-center justify-center">
+      <Link href="/dashboard">
+        <Button>Go to Dashboard</Button>
+      </Link>
+    </div>
   )
 }
