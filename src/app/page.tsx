@@ -1,15 +1,8 @@
-"use client"
+import LoginForm from '@/components/LoginForm'
+import React from 'react'
 
-import React from "react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-
-export default function Page() {
+export default function page() {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <Link href="/dashboard">
-        <Button>Go to Dashboard</Button>
-      </Link>
-    </div>
+    <div className='min-h-screen flex items-center justify-center px-4 w-full login-bgfull'><LoginForm/></div>
   )
 }

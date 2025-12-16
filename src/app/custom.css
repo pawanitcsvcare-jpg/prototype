@@ -21,3 +21,21 @@
 .side-radiuss{
     border-radius: 0px 10px 10px 0px;
 }
+.logintext {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+.logintext h3{
+font-size: 22px;
+    font-weight: 600;
+    padding-bottom: 14px;
+}
+.logintext p{
+    font-size: 15px;
+}
+.login-bgfull{
+        background-color: #ebebf4;
+}
