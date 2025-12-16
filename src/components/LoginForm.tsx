@@ -21,15 +21,15 @@ export default function LoginForm() {
 
         <div className="relative mt-10 auth-imgs">
           <Image
-            src="/img1.PNG"
-            alt="Frame Image"
+            src="/img1.png"
+            alt="Image"
             width={420}
             height={300}
             className="rounded-lg"
           />
 
           <Image
-            src="/img2.PNG"
+            src="/img2.png"
             alt="Image"
             width={150}
             height={120}
