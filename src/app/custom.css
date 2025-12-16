@@ -39,3 +39,48 @@ font-size: 22px;
 .login-bgfull{
         background-color: #ebebf4;
 }
+
+/* Animations */
+@keyframes frameAnimate1 {
+  0%, 20%, 40%, 100% { transform: translateY(0); }
+  10%, 30% { transform: translateY(-10px); }
+}
+
+@keyframes frameAnimate2 {
+  0%, 20%, 40%, 100% { transform: translateX(0); }
+  10%, 30% { transform: translateX(-10px); }
+}
+
+.position1 {
+  animation: frameAnimate1 20s infinite;
+}
+
+.position2 {
+  animation: frameAnimate2 25s infinite;
+}
+
+/* Image container */
+.auth-imgs {
+  max-width: 600px;
+  margin: 80px 30px 30px;
+}
+.auth-imgs img{
+    border-radius: 10px;
+}
+.rightmin{
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
