@@ -31,7 +31,7 @@ const notes = [
 
 export default function CustomerNotes() {
   return (
-    <div className="w-full max-w-xl rounded-lg border bg-white shadow-sm overflow-hidden">
+    <div className="w-full rounded-lg border bg-white shadow-sm overflow-hidden">
       {/* Header */}
       <div className="sticky top-0 z-10 flex items-center justify-between border-b bg-white px-4 py-3">
         <h3 className="font-medium text-lg">
