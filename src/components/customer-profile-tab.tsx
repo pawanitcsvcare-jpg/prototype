@@ -2,44 +2,22 @@
 
 import { useState } from "react";
 import {
-  PlayCircle ,
-  PauseCircle ,
+  PlayCircle,
+  PauseCircle,
   Headphones,
   MoreVertical,
   ShoppingCart,
   Package,
-  Send 
+  Send,
 } from "lucide-react";
-import {  IconDeviceMobile, IconAntenna, IconHistory, IconWallet } from "@tabler/icons-react";
-
-
+import {
+  IconDeviceMobile,
+  IconAntenna,
+  IconHistory,
+  IconWallet,
+} from "@tabler/icons-react";
 
 import CarrierSIMDetails from "./carrier-sim-details";
-
-/* -------------------- TAB CONFIG -------------------- */
-
-const tabs = [
-  { id: "carriersimdetails", label: "Carrier SIM Detail", icon: IconAntenna },
-  { id: "status", label: "Status", icon: IconHistory },
-  { id: "suspendservice", label: "Suspend Service", icon: PauseCircle  },
-  { id: "restoreservice", label: "Restore Service", icon: PlayCircle  },
-  { id: "phoneconfig", label: "Phone Config", icon: IconDeviceMobile },
-  { id: "purchasebucket", label: "Purchase Bucket", icon: ShoppingCart  },
-
-  // Overflow tabs
-  { id: "purchasetopup", label: "Purchase Topup Bucket", icon: IconWallet   },
-  { id: "productservice", label: "Product/Features", icon: Package  },
-  { id: "resendota", label: "Resend OTA", icon: Send  },
-  { id: "confirmhlr", label: "Confirm HLR Reg", icon: Headphones },
-  { id: "callforwardingdetails", label: "Update Call Forward Details", icon: Headphones },
-  { id: "changebilling", label: "Change Billing Code", icon: Headphones },
-  { id: "resetvoice", label: "Reset Voicemail Password", icon: Headphones },
-  { id: "sendsms", label: "Send SMS", icon: Headphones },
-  { id: "netip", label: "Net IP", icon: Headphones },
-  { id: "switchmvno", label: "Switch MVNO", icon: Headphones },
-];
-
-const VISIBLE_TABS = 7;
 
 /* -------------------- TAB CONTENT -------------------- */
 
@@ -60,12 +38,56 @@ const tabContent = {
   sendsms: <div>Send SMS content</div>,
   netip: <div>Net IP content</div>,
   switchmvno: <div>Switch MVNO content</div>,
+} as const;
+
+/* -------------------- TYPES -------------------- */
+
+type TabKey = keyof typeof tabContent;
+
+type TabItem = {
+  id: TabKey;
+  label: string;
+  icon: React.ElementType;
 };
+
+/* -------------------- TAB CONFIG -------------------- */
+
+const tabs: TabItem[] = [
+  { id: "carriersimdetails", label: "Carrier SIM Detail", icon: IconAntenna },
+  { id: "status", label: "Status", icon: IconHistory },
+  { id: "suspendservice", label: "Suspend Service", icon: PauseCircle },
+  { id: "restoreservice", label: "Restore Service", icon: PlayCircle },
+  { id: "phoneconfig", label: "Phone Config", icon: IconDeviceMobile },
+  { id: "purchasebucket", label: "Purchase Bucket", icon: ShoppingCart },
+
+  // Overflow tabs
+  { id: "purchasetopup", label: "Purchase Topup Bucket", icon: IconWallet },
+  { id: "productservice", label: "Product/Features", icon: Package },
+  { id: "resendota", label: "Resend OTA", icon: Send },
+  { id: "confirmhlr", label: "Confirm HLR Reg", icon: Headphones },
+  {
+    id: "callforwardingdetails",
+    label: "Update Call Forward Details",
+    icon: Headphones,
+  },
+  { id: "changebilling", label: "Change Billing Code", icon: Headphones },
+  {
+    id: "resetvoice",
+    label: "Reset Voicemail Password",
+    icon: Headphones,
+  },
+  { id: "sendsms", label: "Send SMS", icon: Headphones },
+  { id: "netip", label: "Net IP", icon: Headphones },
+  { id: "switchmvno", label: "Switch MVNO", icon: Headphones },
+];
+
+const VISIBLE_TABS = 7;
 
 /* -------------------- COMPONENT -------------------- */
 
 export default function CustomerProfileTab() {
-  const [activeTab, setActiveTab] = useState("carriersimdetails");
+  const [activeTab, setActiveTab] =
+    useState<TabKey>("carriersimdetails");
   const [open, setOpen] = useState(false);
 
   const visibleTabs = tabs.slice(0, VISIBLE_TABS);
@@ -108,7 +130,7 @@ export default function CustomerProfileTab() {
         {overflowTabs.length > 0 && (
           <div className="relative ml-4">
             <button
-              onClick={() => setOpen(!open)}
+              onClick={() => setOpen((v) => !v)}
               className="rounded p-2 hover:bg-gray-100"
             >
               <MoreVertical size={18} />
@@ -142,7 +164,7 @@ export default function CustomerProfileTab() {
 
       {/* ---------------- TAB CONTENT ---------------- */}
       <div className="px-4 py-4 text-sm text-gray-700">
-        {tabContent[activeTab] || (
+        {tabContent[activeTab] ?? (
           <div className="text-gray-400">Content coming soon…</div>
         )}
       </div>
