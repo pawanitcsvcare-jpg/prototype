@@ -186,7 +186,7 @@ export default function AysncResponse() {
                   <Button type="submit" className="w-full md:w-auto">
                     Submit
                   </Button>
-                   <Button type="Clear"  variant="secondary" className="w-full md:w-auto ml-2">
+                   <Button type="submit"  variant="secondary" className="w-full md:w-auto ml-2">
                     Clear
                   </Button>
                   

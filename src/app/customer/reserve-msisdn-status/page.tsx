@@ -114,7 +114,8 @@ export default function ReserveMSISDNStatus() {
       style={{
         "--sidebar-width": "calc(var(--spacing) * 72)",
         "--header-height": "calc(var(--spacing) * 12)",
-      }}
+      }as React.CSSProperties
+    }
     >
       <AppSidebar variant="inset" />
       <SidebarInset>
@@ -187,7 +188,7 @@ export default function ReserveMSISDNStatus() {
                    <Button type="submit" className="w-full md:w-auto">
                     Submit
                     </Button>
-                    <Button type="Clear"  variant="secondary" className="w-full md:w-auto ml-2">
+                    <Button type="submit"  variant="secondary" className="w-full md:w-auto ml-2">
                     Clear
                 </Button>
                 </div>
