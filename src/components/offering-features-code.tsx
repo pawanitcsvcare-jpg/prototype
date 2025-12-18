@@ -21,14 +21,33 @@ import {
 
 import { Button } from "@/components/ui/button"
 
+/* -------------------- TYPES -------------------- */
+
+type OfferingRow = {
+  id: number
+  offringcode: string
+  description: string
+  date: string
+}
+
 /* -------------------- DATA -------------------- */
-const rows = [ { id: 1, offringcode: "APNPREPO", description: "APN PRE PROV O SOC", date: "07-27-2025", }, { id: 2, offringcode: "RMABRO", description: "RM OPT ABR SOC", date: "07-27-2025", }, { id: 3, offringcode: "RMVLTEO", description: "RM OPT VOLTE SOC", date: "07-27-2025", }, { id: 4, offringcode: "RMABRO", description: "RM OPT ABR SOC", date: "07-27-2025", }, { id: 5, offringcode: "RMABRO", description: "RM OPT ABR SOC", date: "07-27-2025", }, { id: 6, offringcode: "RMVLTEO", description: "RM OPT VOLTE SOC", date: "07-27-2025", }, ]
+
+const rows: OfferingRow[] = [
+  { id: 1, offringcode: "APNPREPO", description: "APN PRE PROV O SOC", date: "07-27-2025" },
+  { id: 2, offringcode: "RMABRO", description: "RM OPT ABR SOC", date: "07-27-2025" },
+  { id: 3, offringcode: "RMVLTEO", description: "RM OPT VOLTE SOC", date: "07-27-2025" },
+  { id: 4, offringcode: "RMABRO", description: "RM OPT ABR SOC", date: "07-27-2025" },
+  { id: 5, offringcode: "RMABRO", description: "RM OPT ABR SOC", date: "07-27-2025" },
+  { id: 6, offringcode: "RMVLTEO", description: "RM OPT VOLTE SOC", date: "07-27-2025" },
+]
+
+/* -------------------- COMPONENT -------------------- */
 
 export default function OfferingFeaturesCode() {
   const [open, setOpen] = useState(false)
-  const [selectedRow, setSelectedRow] = useState(null)
+  const [selectedRow, setSelectedRow] = useState<OfferingRow | null>(null)
 
-  const handleRowClick = (row) => {
+  const handleRowClick = (row: OfferingRow) => {
     setSelectedRow(row)
     setOpen(true)
   }
@@ -84,7 +103,7 @@ export default function OfferingFeaturesCode() {
       >
         <SheetContent
           side="right"
-         className="w-[500px] max-w-none sm:max-w-none gap-0"
+          className="w-[500px] max-w-none sm:max-w-none gap-0"
         >
           <SheetHeader>
             <SheetTitle>Feature Code Details</SheetTitle>
@@ -95,7 +114,6 @@ export default function OfferingFeaturesCode() {
 
           {selectedRow && (
             <div className="p-4 space-y-6 border-t">
-
               {/* -------- Summary -------- */}
               <div className="grid grid-cols-2 gap-4 text-sm rounded-lg p-4 bg-blue-100">
                 <div>
@@ -136,20 +154,6 @@ export default function OfferingFeaturesCode() {
 
                     <tr className="divide-x bg-muted/30">
                       <td className="px-4 py-2">2</td>
-                      <td className="px-4 py-2">APNA04</td>
-                      <td className="px-4 py-2">BROADBAND ACCESS</td>
-                      <td className="px-4 py-2">GPRS</td>
-                    </tr>
-
-                      <tr className="divide-x">
-                      <td className="px-4 py-2">3</td>
-                      <td className="px-4 py-2">APNA02</td>
-                      <td className="px-4 py-2">DATA ACCESS</td>
-                      <td className="px-4 py-2">GPRS</td>
-                    </tr>
-
-                    <tr className="divide-x bg-muted/30">
-                      <td className="px-4 py-2">4</td>
                       <td className="px-4 py-2">APNA04</td>
                       <td className="px-4 py-2">BROADBAND ACCESS</td>
                       <td className="px-4 py-2">GPRS</td>
