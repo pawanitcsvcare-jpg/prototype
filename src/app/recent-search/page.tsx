@@ -7,7 +7,6 @@ import { AppSidebar } from "@/components/app-sidebar"
 import { SiteHeader } from "@/components/site-header"
 import { Button } from "@/components/ui/button"
 import { IconDownload } from "@tabler/icons-react"
-
 import {
   SidebarInset,
   SidebarProvider,
@@ -120,6 +119,8 @@ export default function Page() {
         <SiteHeader />
 
         <div className="flex flex-1 flex-col p-6">
+
+
           <Card className="@container/card">
             <CardHeader className="border-b py-0flex items-center gap-0 space-y-0 border-b py-5 sm:flex-row pt-0">
               <CardTitle>CSR Search History</CardTitle>

@@ -8,7 +8,7 @@ import { SiteHeader } from "@/components/site-header"
 import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { IconDownload } from "@tabler/icons-react"
+import { IconDownload, IconSearch } from "@tabler/icons-react"
 
 import {
   Select,
@@ -38,6 +38,7 @@ import {
   TableHead,
   TableCell,
 } from "@/components/ui/table"
+
 
 // -------------------- DATA --------------------
 const rows = [
@@ -179,6 +180,8 @@ export default function Page() {
         <SiteHeader />
 
         <div className="flex flex-1 flex-col p-6">
+
+
           <Card className="@container/card">
             <CardHeader className="border-b py-0flex items-center gap-0 space-y-0 border-b py-5 sm:flex-row pt-0">
               <CardTitle>Subscriber&apos;s List</CardTitle>
@@ -247,14 +250,13 @@ export default function Page() {
               </form>
 
               {/* ---------------- SEARCH + DOWNLOAD ---------------- */}
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 mt-40">
-               <div className="relative"> <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"> <svg className="w-4 h-4 text-body" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/></svg> </div> <input type="text" id="input-group-1" className="block w-full max-w-96 ps-9 pe-3 py-2 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]" placeholder="Search" /> </div>
-                <Button variant="outline" size="sm">
-                  <IconDownload className="mr-2 h-4 w-4" />
-                  Download
-                </Button>
-              </div>
-
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 mt-40">
+                             <div className="relative"> <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"><IconSearch className="w-4 h-4 text-body" /> </div> <input type="text"placeholder="Search...."className="w-full max-w-96 h-9 rounded-md border border-gray-300 bg-white ps-9 pe-3 text-sm outline-none focus:border-gray-300 focus:ring-1 focus:ring-gray-300" /> </div>
+                              <Button variant="outline" size="sm">
+                                <IconDownload className="mr-2 h-4 w-4" />
+                                Download
+                              </Button>
+                            </div>
               {/* ---------------- RESPONSIVE TABLE ---------------- */}
               <div className="relative w-full overflow-x-auto">
                 <Table className="min-w-[1100px]">
@@ -300,11 +302,22 @@ export default function Page() {
                           {row.zip}
                         </TableCell>
                         <TableCell>{row.activationdate}</TableCell>
-                        <TableCell>{row.accountstatus}</TableCell>
                         <TableCell>
-                          <Button size="sm" variant="secondary">
-                            {row.action}
-                          </Button>
+                          <span
+              className={`inline-flex items-center gap-1 rounded px-2 py-1 text-xs font-semibold
+                ${
+                  row.accountstatus === "ACTIVE"
+                    ? "bg-green-100 text-green-700"
+                    : "bg-red-100 text-red-700"
+                }`}
+            >
+              ● {row.accountstatus}
+            </span>
+                          </TableCell>
+                        <TableCell>
+                          <Button size="sm" className="bg-orange-300 ml1 hover:bg-orange-700">
+                                         {row.action}
+                                        </Button>
                         </TableCell>
                       </TableRow>
                     ))}
