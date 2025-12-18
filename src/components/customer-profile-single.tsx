@@ -5,7 +5,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 
-import { IconUser, IconBuildingSkyscraper, IconBuilding, IconFileText, IconLock, IconCheck, IconMapPin, IconDeviceMobile, IconCalendar, IconAntenna, IconHistory, IconTicket, IconReceipt,  IconVoicemail } from "@tabler/icons-react";
+import { IconUser, IconBuildingSkyscraper, IconBuilding, IconFileText, IconLock, IconCheck, IconMapPin, IconDeviceMobile, IconCalendar, IconAntenna, IconHistory, IconTicket, IconReceipt } from "@tabler/icons-react";
 
 
 export default function CustomerProfileSingle() {
