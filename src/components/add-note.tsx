@@ -27,7 +27,7 @@ export default function AddNotes() {
 
             <div className="pt-4">
                   <Label className="mb-2 text-sm">Notes</Label>
-                 <Textarea placeholder="Type your note here..." />
+                 <Textarea />
 
                  <div className="pt-4 flex justify-end">
                   <Button type="submit" className="w-full md:w-auto">
