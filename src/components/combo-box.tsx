@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Check, ChevronsUpDown } from "lucide-react"
+import { Check, ChevronsUpDown, Sparkles } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { IconDownload } from "@tabler/icons-react"
 
@@ -76,48 +76,67 @@ export function ComboboxDemo() {
 
   return (
     <>
-      {/* -------------------- COMBOBOX -------------------- */}
-      <Popover open={open} onOpenChange={setOpen}>
-        <PopoverTrigger asChild>
-          <Button
-            variant="outline"
-            role="combobox"
-            aria-expanded={open}
-            className="w-[400px] justify-between global-searchbar"
-          >
-            {value
-              ? frameworks.find((item) => item.value === value)?.label
-              : "Search Here...."}
-            <ChevronsUpDown className="opacity-50" />
-          </Button>
-        </PopoverTrigger>
+      {/* -------------------- SEARCH BAR -------------------- */}
+      <div className="relative w-[500px]">
+        <Popover open={open} onOpenChange={setOpen}>
+          <PopoverTrigger asChild>
+            <Button
+              variant="outline"
+              role="combobox"
+              aria-expanded={open}
+              className="w-full justify-between pr-28 global-searchbar h-12"
+            >
+              {value
+                ? frameworks.find((item) => item.value === value)?.label
+                : "Search Here...."}
+              <ChevronsUpDown className="opacity-50" />
+            </Button>
+          </PopoverTrigger>
 
-        <PopoverContent className="w-[400px] p-0">
-          <Command>
-            <CommandInput placeholder="Search Here...." className="h-9" />
-            <CommandList>
-              <CommandEmpty>No result found.</CommandEmpty>
-              <CommandGroup>
-                {frameworks.map((item) => (
-                  <CommandItem
-                    key={item.value}
-                    value={item.value}
-                    onSelect={() => handleSelect(item)}
-                  >
-                    {item.label}
-                    <Check
-                      className={cn(
-                        "ml-auto",
-                        value === item.value ? "opacity-100" : "opacity-0"
-                      )}
-                    />
-                  </CommandItem>
-                ))}
-              </CommandGroup>
-            </CommandList>
-          </Command>
-        </PopoverContent>
-      </Popover>
+          {/* ✅ THIS WAS MISSING */}
+          <PopoverContent className="w-[550px] p-0">
+            <Command>
+              <CommandInput placeholder="Search Here...." />
+              <CommandList>
+                <CommandEmpty>No result found.</CommandEmpty>
+                <CommandGroup>
+                  {frameworks.map((item) => (
+                    <CommandItem
+                      key={item.value}
+                      value={item.value}
+                      onSelect={() => handleSelect(item)}
+                    >
+                      {item.label}
+                      <Check
+                        className={cn(
+                          "ml-auto",
+                          value === item.value
+                            ? "opacity-100"
+                            : "opacity-0"
+                        )}
+                      />
+                    </CommandItem>
+                  ))}
+                </CommandGroup>
+              </CommandList>
+            </Command>
+          </PopoverContent>
+        </Popover>
+
+        {/* -------------------- AI MODE BUTTON -------------------- */}
+        <button
+  type="button"
+  onClick={() => router.push("/ai-mode-page")}
+  className="absolute right-2 top-1/2 -translate-y-1/2"
+>
+  <div className=" relative rounded-lg p-[1px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-gradient-border">
+    <div className="flex items-center gap-1.5 rounded-md bg-white px-3 py-1.5 text-sm font-medium text-gray-900 shadow-sm transition-all duration-300 hover:scale-[1] hover:shadow-[0_0_10px_rgba(168,85,247,0.45)]">
+      <Sparkles className="h-4 w-4 text-purple-600 animate-pulse" />
+      AI Mode
+    </div>
+  </div>
+</button>
+      </div>
 
       {/* -------------------- ALERT DIALOG -------------------- */}
       <AlertDialog open={alertOpen} onOpenChange={setAlertOpen}>

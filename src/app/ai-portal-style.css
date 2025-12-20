@@ -1,0 +1,58 @@
+.ai-portal-header-bg{
+	background-color:#5282f3;
+}
+.ai-portal-background-bg{
+	background-color: #f6f6ff;
+}
+
+.ai-main-card-box {
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: auto;
+    max-height: 75vh;
+    padding: 20px;
+    height: auto;
+}
+
+.ai-textarea-height{
+    min-height: 60px;
+}
+
+.clear-button{
+    position: absolute;
+    right: 0;
+    top: 38px;
+    right: 30px;
+}
+.chat-bg-all{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

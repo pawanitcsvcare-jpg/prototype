@@ -31,10 +31,10 @@ import {
 } from "@/components/ui/sidebar"
 
 /* -------------------- DATA -------------------- */
-const data = {
+export const data = {
   user: {
-    name: "Supadmin",
-    email: "support@telgoo5.com",
+    name: "Johnson",
+    email: "johnson@example.com",
     avatar: "/avatars/shadcn.jpg",
   },
 
@@ -55,7 +55,8 @@ const data = {
       title: "Customer Profile",
       icon: IconUsers,
       subMenu: [
-        {title: "Recent Searches", url: "/customer-profile/recent-search", },
+         {title: "Customer Profile", url: "/customer-profile/customer-profile-details", },
+        {title: "Recent Searches", url: "/recent-search", },
         { title: "Order", url: "/customer-profile/order" },
         { title: "Purchase", url: "/customer-profile/purchase" },
         { title: "History", url: "/customer-profile/history" },
@@ -82,7 +83,6 @@ const data = {
   navSecondary: [
     { title: "Get Help", url: "#", icon: IconHelp },
     { title: "Inquiry", url: "#", icon: IconSettings },
-    { title: "Virtual NOC", url: "#", icon: IconSettings },
     { title: "Search", url: "#", icon: IconSearch },
   ],
 }

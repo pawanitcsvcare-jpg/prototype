@@ -31,9 +31,9 @@ export function NavSecondary({
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
               <Link href="/customer-profile/recent-search">
-              <Button className="bg-blue-400 text-white hover:bg-blue-500 w-full">
+              <Button className="w-full relative rounded-lg p-[1px] bg-gradient-to-r from-blue-500 via-purple-500 to-blue-700 animate-gradient-border">
                 <IconUsers />
-                <span>Recent Searches</span>
+                <span>Go to Virtual NOC</span>
                 </Button>
               </Link>
             </SidebarMenuButton>
