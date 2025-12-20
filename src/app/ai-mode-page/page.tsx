@@ -100,9 +100,9 @@ const getHeadingByQuery = (query: string) => {
             {/* SUGGESTIONS */}
             <div className="mt-6 w-full max-w-3xl space-y-3">
               {[
-                "Top 2 customer search report",
-                "Top 4 customer search report",
-                "Top 11 customer search report",
+                "Top Five Customer sSarch Report",
+                "Top Five MSISDNs Identified from Recent Search Activity",
+                "Top Five High-Impact Errors Affecting Operational Stability",
               ].map((text, i) => (
                 <button
                   key={i}
@@ -122,7 +122,7 @@ const getHeadingByQuery = (query: string) => {
        {/* CHAT RESULT TABLE */}
 {chatMode && result.length > 0 && (
   <div className="mt-10 w-full px-3 sm:px-4">
-    
+
     <div className="mx-auto max-w-4xl overflow-x-auto chat-bg-all">
 
      <h3 className="mb-3 text-md font-semibold text-gray-700">
