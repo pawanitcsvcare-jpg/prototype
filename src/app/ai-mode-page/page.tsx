@@ -100,7 +100,7 @@ const getHeadingByQuery = (query: string) => {
             {/* SUGGESTIONS */}
             <div className="mt-6 w-full max-w-3xl space-y-3">
               {[
-                "Top Five Customer Sarch Report",
+                "Top Five Customer Search Report",
                 "Top Five MSISDNs Identified from Recent Search Activity",
                 "Top Five High-Impact Errors Affecting Operational Stability",
               ].map((text, i) => (
