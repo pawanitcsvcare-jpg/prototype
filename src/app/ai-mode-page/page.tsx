@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import { Mic, Plus, Sparkles, Trash2 } from "lucide-react"
-
+import { Toaster, toast } from "sonner"
 import AIHeader from "@/components/ai-header"
 import AIFooterPage from "@/components/ai-footer-card"
 import { recentSearchData, recentSearchDataColumns, } from "@/lib/recent-search-data"
@@ -20,16 +20,40 @@ export default function AIModePage() {
   }
 
   const handleSearch = (text: string) => {
-    setQuery(text)
-    setChatMode(true)
+  setQuery(text)
 
-    if (text.toLowerCase().includes("customer")) {
-      const count = extractNumber(text)
-      setResult(recentSearchData.slice(0, count))
-    } else {
-      setResult([])
-    }
+  const lowerText = text.toLowerCase()
+
+  // ✅ CUSTOMER → HAS DATA
+  if (lowerText.includes("customer")) {
+    const count = extractNumber(text)
+    setResult(recentSearchData.slice(0, count))
+    setChatMode(true)
+    return
   }
+
+  // ❌ MSISDN → NO DATA
+  if (lowerText.includes("msisdn")) {
+    toast.error("No Data Found", {
+      description: "No MSISDN records are available for the selected query.",
+    })
+    return
+  }
+
+  // ❌ ERRORS → NO DATA
+  if (lowerText.includes("error")) {
+    toast.error("No Data Found", {
+      description: "No high-impact error records are available at this time.",
+    })
+    return
+  }
+
+  // ❌ DEFAULT
+  toast.info("No Data Found", {
+    description: "Please try a different search query.",
+  })
+}
+
 
   const clearChat = () => {
     setQuery("")
@@ -83,7 +107,7 @@ const getHeadingByQuery = (query: string) => {
                   rows={2}
                   value={query}
                   onChange={(e) => handleSearch(e.target.value)}
-                  placeholder="Ask anything"
+                  placeholder="Ask anything..."
                   className="w-full resize-none bg-transparent text-sm outline-none ai-textarea-height"
                 />
 
@@ -166,7 +190,7 @@ const getHeadingByQuery = (query: string) => {
 )}
         <div ref={bottomRef} />
       </div>
-
+<Toaster position="top-right" richColors />
       {/* FIXED INPUT */}
   {chatMode && (
   <div className="fixed bottom-0 left-0 right-0 border-t bg-white px-4 py-3">
