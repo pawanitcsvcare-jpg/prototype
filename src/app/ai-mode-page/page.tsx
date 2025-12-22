@@ -90,7 +90,7 @@ export default function AIModePage() {
       <AIHeader />
 
       {/* MAIN CONTENT */}
-      <div className="flex flex-col items-center px-4 pb-32 fix-heights">
+      <div className="flex flex-col items-center px-4 pb-32 fix-heights overflow-auto">
         {/* DEFAULT VIEW */}
         {!chatMode && (
           <>
