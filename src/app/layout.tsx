@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./custom.css";
 import "./globals.css";
 import "./ai-portal-style.css";
+import BottomHistoryTabs from "@/components/bottom-history-tabs";
 
 
 const geistSans = Geist({
@@ -31,6 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <BottomHistoryTabs />
       </body>
     </html>
   );

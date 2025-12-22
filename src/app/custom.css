@@ -169,8 +169,12 @@ font-size: 22px;
   background-size: 300% 300%;
   animation: gradient-border 6s ease infinite;
 }
-
-
+.disabled\:opacity-50:disabled {
+    background-color: #c9c9c9;
+}
+.bottom-spaceing, .footer-bottom-spacing{
+    margin-bottom: 45px;
+}
 
 
 

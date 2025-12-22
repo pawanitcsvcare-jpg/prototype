@@ -18,17 +18,23 @@ import {
 } from "@tabler/icons-react";
 
 import CarrierSIMDetails from "./carrier-sim-details";
+import CustomerProfileStatus from "@/app/customer-profile/status/page";
+import CustomerProfileSuspendedService from "@/app/customer-profile/suspend-service/page";
+import CustomerProfileRestoreService from "@/app/customer-profile/restore-service/page";
+import CustomerProfilePhoneConfiq from "@/app/customer-profile/phone-config/page";
+import CustomerProfilePurchaseBucket from "@/app/customer-profile/purchase-bucket/page";
+import CustomerProfilePurchaseTopupBucket from "@/app/customer-profile/purchase-topup-bucket/page";
 
 /* -------------------- TAB CONTENT -------------------- */
 
 const tabContent = {
   carriersimdetails: <CarrierSIMDetails />,
-  status: <div>Status content goes here</div>,
-  suspendservice: <div>Suspend Service content</div>,
-  restoreservice: <div>Restore Service content</div>,
-  phoneconfig: <div>Phone Config content</div>,
-  purchasebucket: <div>Purchase Bucket content</div>,
-  purchasetopup: <div>Purchase Topup Bucket content</div>,
+  status: <CustomerProfileStatus />,
+  suspendservice: <CustomerProfileSuspendedService />,
+  restoreservice: <CustomerProfileRestoreService />,
+  phoneconfig: <CustomerProfilePhoneConfiq />,
+  purchasebucket: <CustomerProfilePurchaseBucket />,
+  purchasetopup: <CustomerProfilePurchaseTopupBucket />,
   productservice: <div>Product/Features content</div>,
   resendota: <div>Resend OTA content</div>,
   confirmhlr: <div>Confirm HLR Reg content</div>,

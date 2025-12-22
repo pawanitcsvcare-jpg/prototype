@@ -28,7 +28,7 @@ const features = [
 export default function AIFooterPage() {
   return (
 
-    <div className="min-h-screen ai-portal-background-bg">
+    <div className="min-h-screena ai-portal-background-bg">
 
       <div className="flex flex-col items-center px-4">
 

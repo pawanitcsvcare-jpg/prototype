@@ -29,8 +29,12 @@
     border-radius: 20px;
     padding: 20px;
 }
-
-
+.fix-heights{
+    height: calc(100vh - 70px);
+}
+body:has(#ai-page-root) .bottom-history-tabs {
+  display: none !important;
+}
 
 
 
