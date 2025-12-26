@@ -55,9 +55,9 @@ export const data = {
       title: "Customer Profile",
       icon: IconUsers,
       subMenu: [
+        {title: "Recent Searches", url: "/customer-profile/recent-search", },
          {title: "Customer Profile", url: "/customer-profile/customer-profile-details", },
-        {title: "Recent Searches", url: "/recent-search", },
-        { title: "Order", url: "/customer-profile/order" },
+        { title: "Order", url: "/customer-profile/customer-profile-details?tab=order" },
         { title: "Purchase", url: "/customer-profile/purchase" },
         { title: "History", url: "/customer-profile/history" },
         { title: "Usage", url: "/customer-profile/usage" },
@@ -72,8 +72,18 @@ export const data = {
       ],
     },
 
-    { title: "Plan", url: "/customer-profile", icon: IconChartBar },
-    { title: "Actions", url: "/actions", icon: IconFileDescription },
+    { title: "Plan", url: "/plan/lockup-teriff", icon: IconChartBar },
+
+{
+      title: "Actions",
+      icon: IconFileDescription,
+      subMenu: [
+        {title: "Bulk/Single Upload", url: "/action/bulk-singleupload", },
+         {title: "Report", url: "/action/report", },
+      ],
+    },
+
+
     { title: "Inventory", url: "/inventory", icon: IconInnerShadowTop },
     { title: "Portin Order", url: "/portin-order", icon: IconFileAi },
     { title: "Report", url: "/report", icon: IconReport },

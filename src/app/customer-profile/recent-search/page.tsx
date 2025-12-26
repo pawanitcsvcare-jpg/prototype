@@ -70,8 +70,8 @@ export default function RecentSearch() {
         <SiteHeader />
 
         <div className="flex flex-1 flex-col p-6">
-          <Card>
-            <CardHeader className="border-b py-5">
+          <Card className="pt-0">
+            <CardHeader className="border-b py-5 gap-0">
               <CardTitle>CSR Search History</CardTitle>
             </CardHeader>
 
@@ -111,7 +111,7 @@ export default function RecentSearch() {
                         <TableCell>{row.customerid}</TableCell>
                         <TableCell>
                           <Link
-                            href={`/customer-profile/customer-profile-details/${row.msisdn}`}
+                            href={`/customer-profile/customer-profile-details`}
                             className="text-blue-600 hover:underline"
                           >
                             {row.msisdn}

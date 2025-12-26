@@ -24,6 +24,15 @@ import CustomerProfileRestoreService from "@/app/customer-profile/restore-servic
 import CustomerProfilePhoneConfiq from "@/app/customer-profile/phone-config/page";
 import CustomerProfilePurchaseBucket from "@/app/customer-profile/purchase-bucket/page";
 import CustomerProfilePurchaseTopupBucket from "@/app/customer-profile/purchase-topup-bucket/page";
+import CustomerProfileProductFeatures from "@/app/customer-profile/product-feature/page";
+import CustomerProfileResendOTA from "@/app/customer-profile/resend-ota/page";
+import CustomerProfileHLRRegistration from "@/app/customer-profile/hlr-registration/page";
+import CustomerProfileCallForwardDetails from "@/app/customer-profile/call-forward-details/page";
+import CustomerProfileChangeBillingCode from "@/app/customer-profile/change-billing-code/page";
+import CustomerProfileResetVoicemailPassword from "@/app/customer-profile/call-forward-details/reset-voicemail-password/page";
+import CustomerProfileSendSMS from "@/app/customer-profile/send-sms/page";
+import CustomerProfileNetIP from "@/app/customer-profile/netip/page";
+import CustomerProfileSwitchMVNO from "@/app/customer-profile/switch-mvno/page";
 
 /* -------------------- TAB CONTENT -------------------- */
 
@@ -35,15 +44,15 @@ const tabContent = {
   phoneconfig: <CustomerProfilePhoneConfiq />,
   purchasebucket: <CustomerProfilePurchaseBucket />,
   purchasetopup: <CustomerProfilePurchaseTopupBucket />,
-  productservice: <div>Product/Features content</div>,
-  resendota: <div>Resend OTA content</div>,
-  confirmhlr: <div>Confirm HLR Reg content</div>,
-  callforwardingdetails: <div>Call Forward Details content</div>,
-  changebilling: <div>Change Billing Code content</div>,
-  resetvoice: <div>Reset Voicemail Password content</div>,
-  sendsms: <div>Send SMS content</div>,
-  netip: <div>Net IP content</div>,
-  switchmvno: <div>Switch MVNO content</div>,
+  productservice: <CustomerProfileProductFeatures />,
+  resendota: <CustomerProfileResendOTA />,
+  confirmhlr: <CustomerProfileHLRRegistration />,
+  callforwardingdetails: <CustomerProfileCallForwardDetails />,
+  changebilling: <CustomerProfileChangeBillingCode />,
+  resetvoice: <CustomerProfileResetVoicemailPassword />,
+  sendsms: <CustomerProfileSendSMS />,
+  netip: <CustomerProfileNetIP />,
+  switchmvno: <CustomerProfileSwitchMVNO /> ,
 } as const;
 
 /* -------------------- TYPES -------------------- */

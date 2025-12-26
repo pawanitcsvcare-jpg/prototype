@@ -5,21 +5,11 @@ import Link from "next/link";
 
 import { AppSidebar } from "@/components/app-sidebar";
 import { SiteHeader } from "@/components/site-header";
-import { Button } from "@/components/ui/button";
-import { IconDownload, IconBuildingSkyscraper } from "@tabler/icons-react";
 
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
-import {
-  Table,
-  TableHeader,
-  TableBody,
-  TableRow,
-  TableHead,
-  TableCell,
-} from "@/components/ui/table";
 import CustomerProfileSingle from "../../../components/customer-profile-single";
 import CustomerProfileTab from "../../../components/customer-profile-tab";
 

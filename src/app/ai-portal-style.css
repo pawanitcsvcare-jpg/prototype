@@ -3,6 +3,10 @@
 }
 .ai-portal-background-bg{
 	background-color: #f6f6ff;
+    height: 100vh;
+}
+body:has(#ai-page-root){
+    	background-color: #f6f6ff;
 }
 
 .ai-main-card-box {
@@ -36,6 +40,11 @@ body:has(#ai-page-root) .bottom-history-tabs {
   display: none !important;
 }
 
+.ai-middle-result-page{
+        height: 93vh;
+    padding-bottom: 150px;
+    overflow: auto;
+}
 
 
 
