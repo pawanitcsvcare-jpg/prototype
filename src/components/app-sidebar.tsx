@@ -245,7 +245,7 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
                                             className={`block rounded px-2 py-1 text-sm ${
                                               pathname.startsWith(child.url)
                                                 ? "bg-blue-400 text-white"
-                                                : "hover:bg-muted"
+                                                : "hover:blue-400"
                                             }`}
                                           >
                                             {child.title}
