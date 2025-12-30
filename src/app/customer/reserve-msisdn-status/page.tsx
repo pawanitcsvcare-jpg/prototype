@@ -1,4 +1,3 @@
-"use client";
 
 import * as React from "react";
 import Link from "next/link";
@@ -32,6 +31,7 @@ import {
   TableHead,
   TableCell,
 } from "@/components/ui/table";
+import DownloadButton from "@/components/ui/download-button";
 
 // -------------------- DATA --------------------
 const rows = [
@@ -123,7 +123,7 @@ export default function ReserveMSISDNStatus() {
 
         <div className="flex flex-1 flex-col p-6">
           <Card className="@container/card">
-            <CardHeader className="border-b py-0flex items-center gap-0 space-y-0 border-b py-5 sm:flex-row pt-0">
+            <CardHeader className="border-b py-0flex items-center gap-0 space-y-0 border-b py-5 sm:flex-row">
               <CardTitle>Reserve MSISDN Status</CardTitle>
             </CardHeader>
 
@@ -207,10 +207,7 @@ export default function ReserveMSISDNStatus() {
                     className="w-full max-w-96 h-9 rounded-md border border-gray-300 bg-white ps-9 pe-3 text-sm outline-none focus:border-gray-300 focus:ring-1 focus:ring-gray-300"
                   />{" "}
                 </div>
-                <Button variant="outline" size="sm">
-                  <IconDownload className="mr-2 h-4 w-4" />
-                  Download
-                </Button>
+                <DownloadButton  text="Download" className="" />
               </div>
               {/* ---------------- RESPONSIVE TABLE ---------------- */}
               <div className="relative w-full overflow-x-auto">

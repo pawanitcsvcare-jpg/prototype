@@ -34,6 +34,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
+import DownloadButton from "./ui/download-button"
 
 /* -------------------- DATA -------------------- */
 
@@ -151,10 +152,7 @@ export function ComboboxDemo() {
                 {dialogType === "sim" &&
                   "Top Five Recent SIM"}
 
-                <Button variant="outline" size="sm">
-                  <IconDownload className="mr-2 h-4 w-4" />
-                  Download
-                </Button>
+                <DownloadButton  text="Download" className="" />
               </div>
             </AlertDialogTitle>
           </AlertDialogHeader>

@@ -55,7 +55,7 @@ export default function PlanLockupTeriff() {
 
 
           <Card className="@container/card">
-            <CardHeader className="border-b py-0flex items-center gap-0 space-y-0 border-b py-5 sm:flex-row pt-0">
+            <CardHeader className="border-b py-0flex items-center gap-0 space-y-0 border-b py-5 sm:flex-row">
               <CardTitle>Plan</CardTitle>
             </CardHeader>
 

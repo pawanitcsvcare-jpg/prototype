@@ -94,7 +94,7 @@ export function ChartAreaInteractive() {
   const chartData = dataMap[tab]
 
   return (
-    <Card className="@container/card">
+    <Card className="@container/card pt-4 gap-0">
       <CardHeader>
         <CardTitle>Dashboard Overview</CardTitle>
         <CardDescription>

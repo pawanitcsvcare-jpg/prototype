@@ -1,4 +1,4 @@
-"use client"
+
 
 import { Mic, Plus } from "lucide-react"
 

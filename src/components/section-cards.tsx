@@ -13,7 +13,7 @@ import {
 export function SectionCards() {
   return (
     <div className="*:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2 @5xl/main:grid-cols-4">
-      <Card className="@container/card dashboardcar1">
+      <Card className="@container/card dashboardcar1 pt-4">
         <CardHeader>
           <CardDescription className="textColor1">Total Companies</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl textColor1">
@@ -32,7 +32,7 @@ export function SectionCards() {
           </div>
         </CardFooter>
       </Card>
-      <Card className="@container/card dashboardcar2">
+      <Card className="@container/card dashboardcar2 pt-4">
         <CardHeader>
           <CardDescription className="textColor2">Total MVNO / Vendors</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl textColor2">
@@ -51,7 +51,7 @@ export function SectionCards() {
           </div>
         </CardFooter>
       </Card>
-      <Card className="@container/card dashboardcar3">
+      <Card className="@container/card dashboardcar3 pt-4">
         <CardHeader>
           <CardDescription className="textColor3">Total Subscribers</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl textColor3">
@@ -70,7 +70,7 @@ export function SectionCards() {
           </div>
         </CardFooter>
       </Card>
-      <Card className="@container/card dashboardcar4">
+      <Card className="@container/card dashboardcar4 pt-4">
         <CardHeader>
           <CardDescription className="textColor4">Inventory</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl textColor4">

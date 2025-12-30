@@ -29,7 +29,7 @@ export default function SubscriptionDetails() {
           <div className="text-gray-600 font-medium">Active</div>
         </div>
 
-        {/* Status Reason Code */}
+   
         <div className="flex items-center">
           <span className="text-gray-500 flex items-center gap-1 profile-label-texr">
             <IconFileText className="w-4 h-4" /> Status Reason Code
@@ -37,7 +37,7 @@ export default function SubscriptionDetails() {
           <div className="text-gray-600 font-medium">CA</div>
         </div>
 
-        {/* Equipment Type */}
+   
         <div className="flex items-center">
           <span className="text-gray-500 flex items-center gap-1 profile-label-texr">
             <IconDeviceMobile className="w-4 h-4" /> Equipment Type
@@ -45,7 +45,7 @@ export default function SubscriptionDetails() {
           <div className="text-gray-600 font-medium">G</div>
         </div>
 
-        {/* Technology Type */}
+
         <div className="flex items-center">
           <span className="text-gray-500 flex items-center gap-1 profile-label-texr">
             <IconAntenna className="w-4 h-4" /> Technology Type
@@ -53,7 +53,7 @@ export default function SubscriptionDetails() {
           <div className="text-gray-600 font-medium">GSM</div>
         </div>
 
-        {/* IMSI */}
+      
         <div className="flex items-center">
           <span className="text-gray-500 flex items-center gap-1 profile-label-texr">
             <IconDeviceMobile className="w-4 h-4" /> IMSI
@@ -61,7 +61,7 @@ export default function SubscriptionDetails() {
           <div className="text-gray-600 font-medium">310280127785056</div>
         </div>
 
-        {/* PUK1 */}
+
         <div className="flex items-center">
           <span className="text-gray-500 flex items-center gap-1 profile-label-texr">
             <IconLock className="w-4 h-4" /> PUK1
@@ -69,7 +69,7 @@ export default function SubscriptionDetails() {
           <div className="text-gray-600 font-medium">16152705</div>
         </div>
 
-        {/* PUK2 */}
+
         <div className="flex items-center">
           <span className="text-gray-500 flex items-center gap-1 profile-label-texr">
             <IconLock className="w-4 h-4" /> PUK2
@@ -77,7 +77,7 @@ export default function SubscriptionDetails() {
           <div className="text-gray-600 font-medium">14418235</div>
         </div>
 
-        {/* IMEI */}
+
         <div className="flex items-center">
           <span className="text-gray-500 flex items-center gap-1 profile-label-texr">
             <IconDeviceMobile className="w-4 h-4" /> IMEI
@@ -85,7 +85,7 @@ export default function SubscriptionDetails() {
           <div className="text-gray-600 font-medium">912434561243445</div>
         </div>
 
-        {/* IMEI Type */}
+
         <div className="flex items-center">
           <span className="text-gray-500 flex items-center gap-1 profile-label-texr">
             <IconFileText className="w-4 h-4" /> IMEI Type
@@ -93,7 +93,6 @@ export default function SubscriptionDetails() {
           <div className="text-gray-600 font-medium">W7</div>
         </div>
 
-        {/* SIM */}
         <div className="flex items-center">
           <span className="text-gray-500 flex items-center gap-1 profile-label-texr">
             <IconDeviceMobile className="w-4 h-4" /> SIM
@@ -101,7 +100,7 @@ export default function SubscriptionDetails() {
           <div className="text-gray-600 font-medium">8901280233127787314</div>
         </div>
 
-        {/* Manufacturer Make */}
+
         <div className="flex items-center">
           <span className="text-gray-500 flex items-center gap-1 profile-label-texr">
             <IconBuilding className="w-4 h-4" /> Manufacturer Make

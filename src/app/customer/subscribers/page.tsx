@@ -1,4 +1,4 @@
-"use client"
+
 
 import * as React from "react"
 import Link from "next/link"
@@ -38,6 +38,7 @@ import {
   TableHead,
   TableCell,
 } from "@/components/ui/table"
+import DownloadButton from "@/components/ui/download-button"
 
 
 // -------------------- DATA --------------------
@@ -183,7 +184,7 @@ export default function Page() {
 
 
           <Card className="@container/card">
-            <CardHeader className="border-b py-0flex items-center gap-0 space-y-0 border-b py-5 sm:flex-row pt-0">
+            <CardHeader className="border-b py-0flex items-center gap-0 space-y-0 border-b py-5 sm:flex-row">
               <CardTitle>Subscriber&apos;s List</CardTitle>
             </CardHeader>
 
@@ -252,10 +253,7 @@ export default function Page() {
               {/* ---------------- SEARCH + DOWNLOAD ---------------- */}
                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 mt-40">
                              <div className="relative"> <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"><IconSearch className="w-4 h-4 text-body" /> </div> <input type="text"placeholder="Search...."className="w-full max-w-96 h-9 rounded-md border border-gray-300 bg-white ps-9 pe-3 text-sm outline-none focus:border-gray-300 focus:ring-1 focus:ring-gray-300" /> </div>
-                              <Button variant="outline" size="sm">
-                                <IconDownload className="mr-2 h-4 w-4" />
-                                Download
-                              </Button>
+                              <DownloadButton  text="Download" className="" />
                             </div>
               {/* ---------------- RESPONSIVE TABLE ---------------- */}
               <div className="relative w-full overflow-x-auto">

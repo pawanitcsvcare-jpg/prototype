@@ -1,4 +1,4 @@
-"use client"
+
 
 import * as React from "react"
 import Link from "next/link"
@@ -43,6 +43,8 @@ import {
 } from "@/components/ui/table"
 import RequiredMark from "@/components/ui/required-mark"
 import { Info } from "lucide-react"
+import FileUpload from "@/components/ui/file-upload"
+import DownloadTFile from "@/components/ui/download-file"
 
 
 // -------------------- PAGE --------------------
@@ -64,7 +66,7 @@ export default function ActionBulkSingleUpload() {
 
 
                     <Card className="@container/card">
-                        <CardHeader className="border-b py-0flex items-center gap-0 space-y-0 border-b py-5 sm:flex-row pt-0">
+                        <CardHeader className="border-b py-0flex items-center gap-0 space-y-0 border-b py-5 sm:flex-row ">
                             <CardTitle>Bulk/Single Upload</CardTitle>
                         </CardHeader>
 
@@ -152,12 +154,12 @@ export default function ActionBulkSingleUpload() {
                                             <Table className="min-w-[1100px] bg-white">
                                                 <TableHeader>
                                                     <TableRow>
-                                                        <TableHead>SIM *	</TableHead>
-                                                        <TableHead>IMEI	</TableHead>
-                                                        <TableHead> Zip Code *	</TableHead>
-                                                        <TableHead>  Plan Code *	</TableHead>
-                                                        <TableHead>  Billing Code	</TableHead>
-                                                        <TableHead>  VendorId * </TableHead>
+                                                        <TableHead>SIM *</TableHead>
+                                                        <TableHead>IMEI</TableHead>
+                                                        <TableHead>Zip Code *</TableHead>
+                                                        <TableHead>Plan Code *</TableHead>
+                                                        <TableHead>Billing Code</TableHead>
+                                                        <TableHead>VendorId *</TableHead>
                                                     </TableRow>
                                                 </TableHeader>
                                                 <TableBody>
@@ -194,7 +196,7 @@ export default function ActionBulkSingleUpload() {
                                 </div>
 
 
-                                <form className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 items-end py-6 pt-4 mt-4">
+                                <form className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 py-6 pt-4 mt-4">
                                     <div>
                                         <Label>Select VendorId
                                             <Tooltip>
@@ -217,8 +219,18 @@ export default function ActionBulkSingleUpload() {
                                         </Select>
                                     </div>
 
-                                </form>
 
+
+                                </form>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 py-6 pt-4">
+                                    <div>
+                                        <DownloadTFile />
+                                    </div>
+                                    <div>
+                                        <FileUpload />
+                                    </div>
+                                   
+                                </div>
 
 
 

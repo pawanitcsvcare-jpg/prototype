@@ -31,6 +31,7 @@ import {
 
 // ✅ IMPORT SHARED DATA
 import { recentSearchData } from "@/lib/recent-search-data"
+import DownloadButton from "@/components/ui/download-button"
 
 export default function RecentSearch() {
   const [searchText, setSearchText] = useState("")
@@ -85,10 +86,7 @@ export default function RecentSearch() {
                   className="w-full max-w-md border px-3 py-2 rounded-md text-sm"
                 />
 
-                <Button variant="outline" size="sm">
-                  <IconDownload className="mr-2 h-4 w-4" />
-                  Download
-                </Button>
+                <DownloadButton  text="Download" className="" />
               </div>
 
               {/* TABLE */}
