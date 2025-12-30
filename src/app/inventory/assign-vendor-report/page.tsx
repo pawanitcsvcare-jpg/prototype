@@ -87,7 +87,7 @@ export default function AssignVendorReport() {
 
           <Card className="@container/card">
 
-             <CardHeader className="border-b py-0flex items-center gap-0 space-y-0 py-5 sm:flex-row pt-0">
+             <CardHeader className="border-b py-0flex items-center gap-0 space-y-0 py-5 sm:flex-row pt-6">
                 <CardTitle>Assign To Vendor Report</CardTitle>
             </CardHeader>
 
