@@ -227,7 +227,7 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
                                 {/* Report submenu toggle */}
                                 <button
                                   onClick={() => setOpenSubMenu(openSubMenu === sub.title ? null : sub.title)}
-                                  className={`flex w-full justify-between rounded px-2 py-1 text-sm hover:bg-muted ${
+                                  className={`flex w-full justify-between rounded px-2 py-1 text-sm hover:bg-blue-400 ${
                                     pathname.startsWith(sub.url) ? "bg-blue-400 text-white" : ""
                                   }`}
                                 >
@@ -261,7 +261,7 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
                                 <Link
                                   href={sub.url}
                                   className={`block w-full rounded px-2 py-1 text-sm ${
-                                    pathname.startsWith(sub.url) ? "bg-blue-400 text-white" : "hover:bg-muted"
+                                    pathname.startsWith(sub.url) ? "bg-blue-400 text-white" : "hover:bg-blue-400"
                                   }`}
                                 >
                                   {sub.title}
